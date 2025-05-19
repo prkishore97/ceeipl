@@ -78,11 +78,12 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
-              src="https://media-hosting.imagekit.io//9692be0dfd80499f/PNG%20.png?Expires=1833092998&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Sxr4Jg10okDcb0y2rnS2D-M~MqKhuaWIVw7TLRisAD2ComVjGm32qap4l1EN93H6R7ALn-Sea-RJi7QtVLNAYUEO997vv89syn0ZqHzcQZrZFoKfWpX4dnWehG~IC7FjG8pMSgIzrAIGCdTDQOfP7DpGoaDWkzxOi6E91LxvXpUVQ9ovzkYNHr47ejRY~1koDqmvx8cveW03QaIIE9Se2gGyte59rpCDE4wif1LQT2crzvrSJw~Aw7sEUZ4Af6A7zJlL35y87WC71Lcmy~XeoYb~xqnXeYHQBys9IIzo9CDjCrIuamoWyt5~7wyBMNpwcCGuKPt10wq4yHJ0bO~3fw__"
+              src="https://ik.imagekit.io/bcuxcmytn/logo.png?updatedAt=1740556557537"
               alt="Chaithanya Enterprises & Engineers Logo"
               width={50}
               height={50}
               className="mr-2"
+              unoptimized
             />
             <span className="flex flex-col">
               <span className="hidden md:inline text-xl tracking-tight bg-gradient-to-r from-orange-300 via-white to-orange-300 text-transparent bg-clip-text animate-gradient-x font-semibold">

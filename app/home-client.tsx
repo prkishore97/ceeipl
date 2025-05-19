@@ -64,6 +64,8 @@ export default function HomePage() {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  pointer-events: none; /* Prevent interaction with the video */
 }
 
 .video-wrapper > div {
@@ -94,10 +96,36 @@ export default function HomePage() {
   pointer-events: auto;
 }
 
+/* Hide video controls */
+.video-wrapper iframe::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-wrapper iframe::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.video-wrapper iframe::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+/* Overlay to prevent interaction */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: transparent;
+}
+
 body, html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 `
 
@@ -111,25 +139,33 @@ body, html {
       {/* Hero Section */}
       <div className="hero-section">
         <div className="video-wrapper">
-          <div style={{ position: "relative", height: "100%" }}>
+          <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", overflow: "hidden" }}>
             <iframe
-              src="https://iframe.mediadelivery.net/embed/427239/f618ed60-8c70-41dd-bb25-fe698ff7652c?autoplay=true&loop=true&muted=true&preload=true&responsive=true&controls=false"
+              src="https://iframe.mediadelivery.net/embed/427239/f618ed60-8c70-41dd-bb25-fe698ff7652c?autoplay=true&loop=true&muted=true&preload=true&responsive=true&controls=false&playsinline=true&autopause=false&clicktoplay=false"
               loading="lazy"
               style={{
                 border: 0,
                 position: "absolute",
-                top: 0,
-                left: 0,
-                height: "100%",
+                top: "50%",
+                left: "50%",
                 width: "100%",
+                height: "100%",
+                minWidth: "100%",
+                minHeight: "100%",
+                objectFit: "cover",
+                transform: "translate(-50%, -50%)",
                 margin: 0,
                 padding: 0,
+                pointerEvents: "none" /* Prevent interaction with the video */,
               }}
               allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-              allowFullScreen={true}
+              allowFullScreen={false}
             ></iframe>
           </div>
         </div>
+
+        {/* Transparent overlay to prevent interaction with the video */}
+        <div className="video-overlay"></div>
 
         <div className="hero-content">
           <div className="text-center px-4">
