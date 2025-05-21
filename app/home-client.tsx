@@ -131,6 +131,32 @@ body, html {
   width: 100%;
   height: 100%;
 }
+
+/* Additional styles to prevent controls */
+.video-wrapper iframe {
+  pointer-events: none !important;
+}
+
+.video-wrapper iframe::-webkit-media-controls,
+.video-wrapper iframe::-webkit-media-controls-panel,
+.video-wrapper iframe::-webkit-media-controls-panel-button,
+.video-wrapper iframe::-webkit-media-controls-play-button,
+.video-wrapper iframe::-webkit-media-controls-volume-slider-container,
+.video-wrapper iframe::-webkit-media-controls-volume-slider,
+.video-wrapper iframe::-webkit-media-controls-mute-button,
+.video-wrapper iframe::-webkit-media-controls-timeline,
+.video-wrapper iframe::-webkit-media-controls-current-time-display,
+.video-wrapper iframe::-webkit-media-controls-time-remaining-display,
+.video-wrapper iframe::-webkit-media-controls-timeline-container,
+.video-wrapper iframe::-webkit-media-controls-toggle-closed-captions-button,
+.video-wrapper iframe::-webkit-media-controls-fullscreen-button,
+.video-wrapper iframe::-internal-media-controls-download-button,
+.video-wrapper iframe::-internal-media-controls-overflow-button {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
 `
 
   return (
@@ -145,7 +171,7 @@ body, html {
         <div className="video-wrapper">
           <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", overflow: "hidden" }}>
             <iframe
-              src="https://iframe.mediadelivery.net/embed/427239/f618ed60-8c70-41dd-bb25-fe698ff7652c?autoplay=true&loop=true&muted=true&preload=true&responsive=true&controls=false&playsinline=true&autopause=false&clicktoplay=false&background=true&defaultTextTrack=false&loadingSpinner=false"
+              src="https://iframe.mediadelivery.net/embed/427239/f618ed60-8c70-41dd-bb25-fe698ff7652c?autoplay=true&loop=true&muted=true&preload=true&responsive=true&controls=false&playsinline=true&autopause=false&clicktoplay=false&background=true&defaultTextTrack=false&loadingSpinner=false&showControls=false&controlsVisibleOnLoad=false&disableInteraction=true"
               loading="lazy"
               style={{
                 border: 0,
@@ -161,11 +187,31 @@ body, html {
                 transform: "translate(-50%, -50%) scale(1.1)",
                 margin: 0,
                 padding: 0,
-                pointerEvents: "auto" /* Allow video to play on mobile */,
+                pointerEvents: "none" /* Prevent all interactions */,
+                userSelect: "none" /* Prevent selection */,
               }}
               allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
               allowFullScreen={false}
+              frameBorder="0"
+              scrolling="no"
+              tabIndex="-1"
             ></iframe>
+            {/* Additional transparent overlay to block all interactions */}
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                zIndex: 4,
+                background: "transparent",
+                pointerEvents: "auto" /* Capture all pointer events */,
+                cursor: "default",
+              }}
+              onClick={(e) => e.preventDefault()}
+              onContextMenu={(e) => e.preventDefault()}
+            ></div>
           </div>
         </div>
 
