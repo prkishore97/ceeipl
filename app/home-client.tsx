@@ -54,6 +54,10 @@ export default function HomePage() {
   padding: 0;
   overflow: hidden;
   background-color: #020e55;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .video-wrapper {
@@ -148,12 +152,13 @@ body, html {
                 position: "absolute",
                 top: "50%",
                 left: "50%",
-                width: "100%",
-                height: "100%",
-                minWidth: "100%",
-                minHeight: "100%",
+                width: "100vw",
+                height: "100vh",
+                minWidth: "100vw",
+                minHeight: "100vh",
                 objectFit: "cover",
-                transform: "translate(-50%, -50%)",
+                objectPosition: "center center",
+                transform: "translate(-50%, -50%) scale(1.1)",
                 margin: 0,
                 padding: 0,
                 pointerEvents: "auto" /* Allow video to play on mobile */,
