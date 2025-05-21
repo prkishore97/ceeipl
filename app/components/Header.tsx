@@ -80,9 +80,9 @@ export default function Header() {
             <Image
               src="https://ik.imagekit.io/bcuxcmytn/logo.png?updatedAt=1740556557537"
               alt="Chaithanya Enterprises & Engineers Logo"
-              width={50}
-              height={50}
-              className="mr-2"
+              width={70}
+              height={70}
+              className="mr-3"
               unoptimized
             />
             <span className="flex flex-col">

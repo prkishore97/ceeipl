@@ -65,7 +65,7 @@ export default function HomePage() {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  pointer-events: none; /* Prevent interaction with the video */
+  pointer-events: auto; /* Allow video to receive events for mobile autoplay */
 }
 
 .video-wrapper > div {
@@ -141,7 +141,7 @@ body, html {
         <div className="video-wrapper">
           <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", overflow: "hidden" }}>
             <iframe
-              src="https://iframe.mediadelivery.net/embed/427239/f618ed60-8c70-41dd-bb25-fe698ff7652c?autoplay=true&loop=true&muted=true&preload=true&responsive=true&controls=false&playsinline=true&autopause=false&clicktoplay=false"
+              src="https://iframe.mediadelivery.net/embed/427239/f618ed60-8c70-41dd-bb25-fe698ff7652c?autoplay=true&loop=true&muted=true&preload=true&responsive=true&controls=false&playsinline=true&autopause=false&clicktoplay=false&background=true&defaultTextTrack=false&loadingSpinner=false"
               loading="lazy"
               style={{
                 border: 0,
@@ -156,7 +156,7 @@ body, html {
                 transform: "translate(-50%, -50%)",
                 margin: 0,
                 padding: 0,
-                pointerEvents: "none" /* Prevent interaction with the video */,
+                pointerEvents: "auto" /* Allow video to play on mobile */,
               }}
               allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
               allowFullScreen={false}
@@ -165,7 +165,13 @@ body, html {
         </div>
 
         {/* Transparent overlay to prevent interaction with the video */}
-        <div className="video-overlay"></div>
+        <div
+          className="video-overlay"
+          style={{
+            pointerEvents: "none", // Allow video to play but prevent interaction
+            touchAction: "none", // Prevent touch actions
+          }}
+        ></div>
 
         <div className="hero-content">
           <div className="text-center px-4">
