@@ -29,10 +29,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${roboto.variable}`}>
       <head>
-        <link
-          rel="icon"
-          href="https://media-hosting.imagekit.io//b568f68881c34b52/favicon.ico?Expires=1833123545&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0r0VC2khj17OLLM03YtqWtd-GyFAwxAVjtUABBQa8tBkq2Lwxbn7JY83ekEfALIMgRxu2btlMjS-BCENQJsywKNmtB5QmweHYj~oUIK29Ex-hsn1EJEY5hWRunqOfBZyOUYJA58t5vusaPVl-CQ-vsbVsmxiV8Ayk5vSnbhYNcWCt9ojeiIyUKfIV9mKl1WLaaDYs5~JS4L5lhHY4Cq5fEafn0r25xVy8Ffqcv7OhYr~z72-F19hOSc28bBIvE6Mg5U2SnP22JbTpOzwCJqb0U0kNXdl8niEl8co5xTTjIvvtju8xTSRQ729TuNhmkeTw64DeOmDiH~Q78ZxPfI-oA__"
-        />
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Theme color for mobile browsers */}
+        <meta name="theme-color" content="#020e55" />
+        <meta name="msapplication-TileColor" content="#020e55" />
+
         <meta name="google-site-verification" content="Tap0xU1B0YdjF08tRkeeCowK9hx4dXlm-qKCjCWPQes" />
 
         {/* Google Analytics and Tag Manager */}
