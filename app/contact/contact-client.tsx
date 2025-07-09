@@ -111,7 +111,7 @@ export default function ContactPage() {
               <p className="mb-6 text-black text-lg">India – 560010.</p>
               <h3 className="text-3xl font-semibold mb-6 text-blue-900">Reach Us</h3>
               <p className="mb-2 text-black text-lg">Phone: 080-23387431</p>
-              <p className="mb-2 text-black text-lg">Mobile: 9916473624</p>
+              <p className="mb-2 text-black text-lg">Mobile: 9916473624, 9945840517</p>
               <p className="text-black text-lg">info@chaithanyaenterprises.com</p>
             </div>
           </div>

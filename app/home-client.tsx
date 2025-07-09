@@ -18,7 +18,7 @@ const projects = [
     title: "Solar Farm Installation",
     description: "",
     image:
-      "https://media-hosting.imagekit.io//df37be3868354276/glo-solar-roof-SSM1-south-Nauset_16-9.webp?Expires=1833027376&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=aDZzjGy0X0V8CRdhhlRmmq7XqGCPyjTqGdKil9D-jXNTrJZzDD07~7nfwYM0Tn7Pz-x~dY1y8yXPsefeyCvEXsjcPOAg3atwGkisy0ZFdZg3ORnE~udABClV9XB-x6GB09y0nl1gp5A6Mlv9ITrO0r~0ghpgufcmHrL4gGNFCy4C2cHHwT63E2b6bEs-dK1ZHIUTg38G8aORaov2DkLIZUyYWiv~Mw5HbTpoUf-aPqobkBEGwcoNMfu0W18p~A1Q2GXbGy0PJyj3s46aVAUsK-poaz3c3MtjyfiMJ5C6CZKdxFHgYJ5v3ONfKasPH1iISeowajX~EBifPUR4yG~GJQ__",
+      "https://media-hosting.imagekit.io//df37be3868354276/glo-solar-roof-SSM1-south-Nauset_16-9.webp?Expires=1833027376&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=aDZzjGy0X0V8CRdhhlRmmq7XqGCPyjTqGdKil9D-jXNTrJZzDD07~7nfwYM0Tn7Pz-x~dY1y8yXPsefeyCvEXsjcPOAg3atwGkisy0ZFdZg3ORnE~udABClV9XB-x6GB09y0nl1gp5A6Mlv9ITrO0r~0ghpgufcmHrL4gGNFCy4C2cHHwT63E2b6bEs-dK1ZHIUTg38G8aORaov2DkLIZUyYWiv~Mw5HbTpoUf-aPqobkBEGwcoNMfu0W18p~A1Q2GXbGy0PJyj3s46aVAUsK~poaz3c3MtjyfiMJ5C6CZKdxFHgYJ5v3ONfKasPH1iISeowajX~EBifPUR4yG~GJQ__",
   },
   {
     title: "Smart Building Automation",
@@ -541,7 +541,7 @@ body, html {
                 <div className="w-24 h-1 bg-white/30 mx-auto mb-8"></div>
                 <h3 className="text-3xl font-semibold mb-6">Reach Us</h3>
                 <p className="mb-2 text-lg opacity-90">Phone: 080-23387431</p>
-                <p className="mb-2 text-lg opacity-90">Mobile: 9916473624</p>
+                <p className="mb-2 text-lg opacity-90">Mobile: 9916473624, 9945840517</p>
                 <p className="text-lg opacity-90">info@chaithanyaenterprises.com</p>
               </div>
             </div>

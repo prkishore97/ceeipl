@@ -27,7 +27,7 @@ export default function Footer() {
             <div className="text-blue-200">
               <p className="mb-1">📍 No.1006, 1st Main, 4th Block, Dr. Rajkumar Road</p>
               <p className="mb-1">Rajajinagar, Bangalore, Karnataka - 560010</p>
-              <p className="mb-1">📞 080-23387431 | 📱 9916473624</p>
+              <p className="mb-1">📞 080-23387431 | 📱 9916473624, 9945840517</p>
               <p>✉️ info@chaithanyaenterprises.com</p>
             </div>
           </div>
