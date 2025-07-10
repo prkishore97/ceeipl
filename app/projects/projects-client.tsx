@@ -92,9 +92,6 @@ const projectImages = [
     src: "https://ik.imagekit.io/bcuxcmytn/PROJECT%20PHOTOS/14.jpg",
   },
   {
-    src: "https://ik.imagekit.io/bcuxcmytn/PROJECT%20PHOTOS/14.jpg",
-  },
-  {
     src: "https://ik.imagekit.io/bcuxcmytn/PROJECT%20PHOTOS/4.jpeg",
   },
   {
